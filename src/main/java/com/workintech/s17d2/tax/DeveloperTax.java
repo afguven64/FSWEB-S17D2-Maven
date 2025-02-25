@@ -4,18 +4,23 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DeveloperTax implements Taxable{
+
+    public static final double SIMPLE_TAX_RATE = 15d;
+    public static final double MIDDLE_TAX_RATE = 25d;
+    public static final double UPPER_TAX_RATE = 35d;
+
     @Override
-    public double getSimpleTaxRate() {
-        return 15d;
+    public Double getSimpleTaxRate() {
+        return SIMPLE_TAX_RATE;
     }
 
     @Override
-    public double getMiddleTaxRate() {
-        return 25d;
+    public Double getMiddleTaxRate() {
+        return MIDDLE_TAX_RATE;
     }
 
     @Override
-    public double getUpperTaxRate() {
-        return 35d;
+    public Double getUpperTaxRate() {
+        return UPPER_TAX_RATE;
     }
 }
